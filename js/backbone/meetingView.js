@@ -1,16 +1,30 @@
 var hmh = hmh || {};
 hmh.api = hmh.api || {};
 
-define(['jquery', 'backbone'],function(){
+define(['jquery', 'backbone', 'meetingModel'],function(){
     hmh.api.meetingView = Backbone.View.extend({
         events:{
             'click #sStart' : 'selectStart',
             'click #sEnd'   : 'selectEnd',
-            'click #btnSchedule'    : 'schedule',
+            'click #btnSchedule'    : 'schedule'
         },
 
         schedule: function() {
+            console.log('schedule');
+            this.model = new hmh.api.meetingModel();
 
+            this.model.set('roomId', $(this.el).find('#hRoomId').text());
+            this.model.set('beginTime', $(this.el).find('#sStart').text());
+            this.model.set('endTime', $(this.el).find('#sEnd').text());
+            this.model.set('people', [1,2,3,4]);
+
+            this.model.save(this.model.toJSON(),
+                {
+                    success: function(model, response) { console.log('success'); },
+                    error: function(model, response) {
+                        console.log('error' + response);
+                    }
+                });
         },
 
         selectStart: function() {
@@ -24,6 +38,7 @@ define(['jquery', 'backbone'],function(){
         template :
             '<div class="row col-lg-offset-1 col-lg-9">' +
                 '<h4>welcome to the meeting view</h4>' +
+                '<hidden id="hRoomId" value="1" />' +
                 '<div class="form-group">' +
                     '<label for="iMeeting" class="col-sm-2 control-label">Meeting:</label>' +
                     '<div class="col-sm-10">' +
@@ -45,7 +60,7 @@ define(['jquery', 'backbone'],function(){
                         '<span id="sEnd" class="glyphicon glyphicon-calendar form-control-feedback"></span>' +
                     '</div>' +
                 '</div>' +
-                '<button type="button" id="btnSchedule" class="btn btn-primary btn-lg pull-right">Schedule!</button>' +
+                '<button id="btnSchedule" type="button" class="btn btn-primary btn-lg pull-right">Schedule!</button>' +
             '</div>',
 
 
