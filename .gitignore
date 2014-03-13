@@ -1,2 +1,4 @@
 *.name
 .idea/misc.xml
+*.xml
+.idea/utopianists.iml
