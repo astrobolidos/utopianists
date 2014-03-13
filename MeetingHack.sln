@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingHack", "MeetingHack\MeetingHack.csproj", "{A0245D8E-E373-4049-B4BB-D288A6EA1B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingHack.DataAccess", "MeetingHack.DataAccess\MeetingHack.DataAccess\MeetingHack.DataAccess.csproj", "{DE5E585A-6188-433A-A39C-06CF7B193095}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0245D8E-E373-4049-B4BB-D288A6EA1B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0245D8E-E373-4049-B4BB-D288A6EA1B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0245D8E-E373-4049-B4BB-D288A6EA1B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0245D8E-E373-4049-B4BB-D288A6EA1B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE5E585A-6188-433A-A39C-06CF7B193095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5E585A-6188-433A-A39C-06CF7B193095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5E585A-6188-433A-A39C-06CF7B193095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5E585A-6188-433A-A39C-06CF7B193095}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
