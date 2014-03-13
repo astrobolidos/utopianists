@@ -4,6 +4,7 @@ requirejs.config({
     baseUrl: 'js',
     paths: {
         jquery		: 'lib/jquery-1.11.0.min',
+        jqueryUI    : 'lib/jquery-ui',
         qunit		: 'lib/qunit-1.13.0',
         underscore	: 'lib/underscore-min',
         backbone	: 'lib/backbone-min',
@@ -19,7 +20,10 @@ requirejs.config({
         teacherassignmentmodel : 'backbone/teacher-assignment-model',
         teacherassignmentcollection : 'backbone/teacher-assignment-collection',
         teacherassignmentitem : 'backbone/assignment-item',
-        meetingView : 'backbone/meetingView'
+
+        // utopianists
+        meetingView : 'backbone/meetingView',
+        meetingModel: 'backbone/meetingModel',
     },
 
     shim: {
@@ -35,7 +39,7 @@ requirejs.config({
     }
 });
 
-require(["bootstrap", 'backbone', 'apiview'], function ($) {
+require(["bootstrap", 'backbone', 'apiview', 'meetingView'], function ($) {
     var options = {
         container: 'body',
         title: "Effective Meetings : Room Locator Pro",
@@ -43,5 +47,6 @@ require(["bootstrap", 'backbone', 'apiview'], function ($) {
         countries : ['Ireland', 'US']
     };
 
-    new hmh.api.view(options);
+    //new hmh.api.view(options);
+    new hmh.api.meetingView(options);
 });
