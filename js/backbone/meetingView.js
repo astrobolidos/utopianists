@@ -21,21 +21,25 @@ define(['jquery', 'backbone', 'meetingModel'],function(){
 
         schedule: function() {
             console.log('schedule');
-            
+
             this.model = new hmh.api.meetingModel();
 
-            this.model.set('roomId', $(this.el).find('#hRoomId').text());
+            this.model.set('roomId', $(this.el).find('#hRoomId')[0].attributes['value'].value);
             this.model.set('beginTime', $(this.el).find('#sStart').text());
             this.model.set('endTime', $(this.el).find('#sEnd').text());
             this.model.set('people', [1,2,3,4]);
 
-            this.model.save(this.model.toJSON(),
-                {
-                    success: function(model, response) { console.log('success'); },
-                    error: function(model, response, options) {
-                        console.log('error' + response);
-                    }
-                });
+            this.model.save();
+
+//            this.model.save(
+//                {
+//                    success: function(model, response, option) {
+//                        console.log('success');
+//                    },
+//                    error: function(model, response, options) {
+//                        console.log('error' + response);
+//                    }
+//                });
         },
 
         selectStart: function() {
