@@ -26,7 +26,10 @@ requirejs.config({
 		teacherassignmentcollection : 'backbone/teacher-assignment-collection',
 
 		dueview				: 'backbone/due-view',
-		calendarview		: 'backbone/calendar-view'
+		calendarview		: 'backbone/calendar-view',
+
+        //utopianists
+        meetingView : 'backbone/meetingView',
     },
     
     shim: {       
@@ -42,7 +45,7 @@ requirejs.config({
     }
 });
 
-require(["bootstrap", 'backbone', 'apiview'], function ($) {
+require(["bootstrap", 'backbone', 'apiview', 'meetingView'], function ($) {
 	var options = {
             container: 'body',
             title: "Hmh Api Tester",
@@ -53,5 +56,6 @@ require(["bootstrap", 'backbone', 'apiview'], function ($) {
     		             '/api/assignment/v1/activities']
         };		
 	 
-	new hmh.api.view(options);
+	//new hmh.api.view(options);
+    new hmh.api.meetingView(options);
 });
