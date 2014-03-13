@@ -4,7 +4,7 @@ requirejs.config({
     baseUrl: 'js',
     paths: {
         jquery		: 'lib/jquery-1.11.0.min',
-        jqueryUI    : 'lib/'
+        jqueryUI    : 'lib/jquery-ui',
         qunit		: 'lib/qunit-1.13.0',
     	underscore	: 'lib/underscore-min',
 		backbone	: 'lib/backbone-min',
