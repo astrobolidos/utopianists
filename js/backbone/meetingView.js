@@ -5,7 +5,12 @@ define(['jquery', 'backbone'],function(){
     hmh.api.meetingView = Backbone.View.extend({
         events:{
             'click #sStart' : 'selectStart',
-            'click #sEnd'   : 'selectEnd'
+            'click #sEnd'   : 'selectEnd',
+            'click #btnSchedule'    : 'schedule',
+        },
+
+        schedule: function() {
+
         },
 
         selectStart: function() {
@@ -40,6 +45,7 @@ define(['jquery', 'backbone'],function(){
                         '<span id="sEnd" class="glyphicon glyphicon-calendar form-control-feedback"></span>' +
                     '</div>' +
                 '</div>' +
+                '<button type="button" id="btnSchedule" class="btn btn-primary btn-lg pull-right">Schedule!</button>' +
             '</div>',
 
 
