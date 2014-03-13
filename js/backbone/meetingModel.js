@@ -3,7 +3,7 @@ hmh.api = hmh.api || {};
 
 define(['jquery', 'backbone', 'moment'], function(){
     hmh.api.meetingModel = Backbone.Model.extend({
-        url: 'http://dub-lp013867.pubedu.hegn.us:8090/api/meeting',
+        url: 'http://172.17.2.8:8090/api/meeting',
 
         default: {
             "$id": "1",

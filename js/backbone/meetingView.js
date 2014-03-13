@@ -7,20 +7,21 @@ define(['jquery', 'backbone', 'meetingModel'],function(){
             'click #sStart'         : 'selectStart',
             'click #sEnd'           : 'selectEnd',
             'click #btnSchedule'    : 'schedule',
-            'click .list-group-item': 'listItemClick'
+            'click .image'          : 'listItemClick'
         },
 
         listItemClick: function(element) {
             console.log('listItemClick');
-            if(element.target.className.contains('active')) {
-                element.target.className = 'list-group-item-heading';
+            if(element.target.nodeName === 'IMG' && element.target.parentNode.className.contains('active')) {
+                element.target.parentNode.className = 'list-group-item';
             } else {
-                element.target.className += ' active';
+                element.target.parentNode.className += ' active';
             }
         },
 
         schedule: function() {
             console.log('schedule');
+            
             this.model = new hmh.api.meetingModel();
 
             this.model.set('roomId', $(this.el).find('#hRoomId').text());
@@ -31,7 +32,7 @@ define(['jquery', 'backbone', 'meetingModel'],function(){
             this.model.save(this.model.toJSON(),
                 {
                     success: function(model, response) { console.log('success'); },
-                    error: function(model, response) {
+                    error: function(model, response, options) {
                         console.log('error' + response);
                     }
                 });
@@ -74,17 +75,17 @@ define(['jquery', 'backbone', 'meetingModel'],function(){
                     '<a href="#" class="list-group-item ">' +
                         '<img src="/images/homer.jpg" class="image" /> ' +
                         '<h4 class="list-group-item-heading">Homero Simpson</h4>' +
-                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                        '<p class="list-group-item-text">this is homer</p><br/></br>' +
                     '</a>' +
                     '<a href="#" class="list-group-item ">' +
-                    '<img src="/images/bart.jpg" class="image" /> ' +
-                    '<h4 class="list-group-item-heading">Bartolomeo Simpson</h4>' +
-                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                        '<img src="/images/bart.jpg" class="image" /> ' +
+                        '<h4 class="list-group-item-heading">Bartolomeo Simpson</h4>' +
+                        '<p class="list-group-item-text">this is homer</p><br/></br>' +
                     '</a>' +
                     '<a href="#" class="list-group-item ">' +
-                    '<img src="/images/lisa.jpg" class="image" /> ' +
-                    '<h4 class="list-group-item-heading">Lisa Simpson</h4>' +
-                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                        '<img src="/images/lisa.jpg" class="image" /> ' +
+                        '<h4 class="list-group-item-heading">Lisa Simpson</h4>' +
+                        '<p class="list-group-item-text">this is homer</p><br/></br>' +
                     '</a>' +
                 '</div>' +
 
