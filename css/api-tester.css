@@ -1,0 +1,51 @@
+.navbar-brand {
+	padding:6px 0 0 6px;
+}
+
+#assign-result {
+	overflow:hidden;
+}
+
+#response-panel{
+	margin-top:1em;
+}
+
+/* syntax highlighting styles*/
+
+#assign-result pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; } 
+#assign-result .string { color: green; clear:right;} 
+#assign-result .number { color: darkorange; } 
+#assign-result .boolean { color: blue; } 
+#assign-result .null { color: magenta; } 
+#assign-result .key { color: red; }
+
+
+/* PoC styles */
+
+.assigment-header h3{
+	margin-bottom:1em;
+}
+.assigment-header .panel-heading button,
+.panel-body button
+ { margin-left:2em; }
+
+.bs-callout button{
+	margin-left:.2em;
+}
+
+
+.assign-dates .label {
+	margin-right:.5em;
+}
+
+ul,
+#assignment-list { list-style-type: none; padding-left: 0;}
+
+
+/* Due View*/
+.due-centre{text-align:center}
+
+/* Calendar View*/
+#cal-slide-content a.event-item{
+	color:#006400;
+}
