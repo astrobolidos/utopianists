@@ -9,6 +9,9 @@ namespace MeetingHack.DataAccess.Models
         public Nullable<int> RoomId { get; set; }
         public Nullable<System.DateTime> BeginTime { get; set; }
         public Nullable<System.DateTime> EndTime { get; set; }
+
+        public int[] PersonIds { get; set; }
+
         public virtual Room Room { get; set; }
     }
 }

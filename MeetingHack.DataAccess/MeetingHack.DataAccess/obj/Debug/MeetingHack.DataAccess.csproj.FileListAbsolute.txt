@@ -11,10 +11,7 @@ C:\Github\Hackstars\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\Meet
 C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\MeetingHack.DataAccess.dll.config
 C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\MeetingHack.DataAccess.dll
 C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\MeetingHack.DataAccess.pdb
-C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\EntityFramework.xml
-C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\MeetingHack.DataAccess.csprojResolveAssemblyReference.cache
-C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\MeetingHack.DataAccess.dll
-C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\MeetingHack.DataAccess.pdb
 C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\Newtonsoft.Json.dll
 C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\MeetingHack.DataAccess.dll
+C:\Github\utopianists\MeetingHack.DataAccess\MeetingHack.DataAccess\obj\Debug\MeetingHack.DataAccess.pdb

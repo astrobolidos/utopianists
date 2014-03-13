@@ -35,6 +35,7 @@ namespace MeetingHack.DataAccess.Models
         private void IgnoreProperties(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Room>().Ignore(t => t.FloorNumber);
+            modelBuilder.Entity<Meeting>().Ignore(m => m.PersonIds);
         }
 
     }
