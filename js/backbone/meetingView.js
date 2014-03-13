@@ -4,9 +4,19 @@ hmh.api = hmh.api || {};
 define(['jquery', 'backbone', 'meetingModel'],function(){
     hmh.api.meetingView = Backbone.View.extend({
         events:{
-            'click #sStart' : 'selectStart',
-            'click #sEnd'   : 'selectEnd',
-            'click #btnSchedule'    : 'schedule'
+            'click #sStart'         : 'selectStart',
+            'click #sEnd'           : 'selectEnd',
+            'click #btnSchedule'    : 'schedule',
+            'click .list-group-item': 'listItemClick'
+        },
+
+        listItemClick: function(element) {
+            console.log('listItemClick');
+            if(element.target.className.contains('active')) {
+                element.target.className = 'list-group-item-heading';
+            } else {
+                element.target.className += ' active';
+            }
         },
 
         schedule: function() {
@@ -60,6 +70,24 @@ define(['jquery', 'backbone', 'meetingModel'],function(){
                         '<span id="sEnd" class="glyphicon glyphicon-calendar form-control-feedback"></span>' +
                     '</div>' +
                 '</div>' +
+                '<div class="list-group">' +
+                    '<a href="#" class="list-group-item ">' +
+                        '<img src="/images/homer.jpg" class="image" /> ' +
+                        '<h4 class="list-group-item-heading">Homero Simpson</h4>' +
+                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                    '</a>' +
+                    '<a href="#" class="list-group-item ">' +
+                    '<img src="/images/bart.jpg" class="image" /> ' +
+                    '<h4 class="list-group-item-heading">Bartolomeo Simpson</h4>' +
+                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                    '</a>' +
+                    '<a href="#" class="list-group-item ">' +
+                    '<img src="/images/lisa.jpg" class="image" /> ' +
+                    '<h4 class="list-group-item-heading">Lisa Simpson</h4>' +
+                    '<p class="list-group-item-text">this is homer</p><br/></br>' +
+                    '</a>' +
+                '</div>' +
+
                 '<button id="btnSchedule" type="button" class="btn btn-primary btn-lg pull-right">Schedule!</button>' +
             '</div>',
 

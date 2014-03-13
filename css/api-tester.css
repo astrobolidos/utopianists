@@ -59,3 +59,5 @@ ul,
     right: 0;
     padding: 8px 37px;
 }
+
+.image { display:block; float:left; width:80px; height:80px; padding-right: 5px; }
