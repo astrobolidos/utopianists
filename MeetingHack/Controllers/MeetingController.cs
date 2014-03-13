@@ -17,6 +17,17 @@ namespace MeetingHack.Controllers
         {
             dbContext.Meetings.Add(meeting);
             dbContext.SaveChanges();
+
+            if (meeting.PersonIds != null && meeting.PersonIds.Any())
+            {
+                foreach (var id in meeting.PersonIds)
+                {
+                    dbContext.Meeting_Participant.Add(
+                        new Meeting_Participant { MeetingId = meeting.MeetingId, PeopleId = id });
+                }
+                dbContext.SaveChanges();
+            }
+            
             return meeting;
         }
 
