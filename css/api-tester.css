@@ -49,3 +49,13 @@ ul,
 #cal-slide-content a.event-item{
 	color:#006400;
 }
+
+.form-control {
+    padding-right: 30px;
+}
+
+.form-control + .glyphicon {
+    position: absolute;
+    right: 0;
+    padding: 8px 37px;
+}
